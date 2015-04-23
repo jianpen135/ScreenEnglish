@@ -3,9 +3,10 @@
 
     <string name="app_name">开屏记单词</string>
     <string name="hello">说明</string>
+    <string name="hello_1"> 确保你安装了有道词典，并且你的/sdcard/Youdao/Dict/下存在notes.db文件</string>
     <string name="change">更换</string>
     <string name="check">确认</string>
-    <string name="action_settings">setings</string>
+    <string name="action_settings">设置</string>
     <string name="window_key">单词</string>
 
 </resources>

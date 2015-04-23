@@ -2,13 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#FFF" >
+	<RelativeLayout 
+	    android:layout_height="wrap_content" 
+	    android:layout_width="match_parent" 
+	    android:layout_gravity="center_horizontal"
+	    android:gravity="center_horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello"
-        android:textSize="20sp"
-        android:layout_gravity="center" />
+		<TextView android:layout_height="wrap_content" 
+		    android:layout_width="wrap_content" 
+		    android:text="@string/hello" 
+		    android:id="@+id/hello"
+		    android:layout_centerHorizontal="true"
+		    android:textColor="@android:color/holo_blue_light" 
+		    android:textSize="26sp"/>
 
+		<TextView 
+		    android:layout_height="wrap_content" 
+		    android:layout_width="wrap_content" 
+		    android:layout_below="@id/hello"
+		    android:text="@string/hello_1" 
+		    android:textSize="20sp" 
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginTop="20dp"/>
+	</RelativeLayout>   
 </LinearLayout>

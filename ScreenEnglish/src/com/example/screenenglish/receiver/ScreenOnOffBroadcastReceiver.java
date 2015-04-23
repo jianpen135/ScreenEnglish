@@ -17,7 +17,6 @@ public class ScreenOnOffBroadcastReceiver extends BroadcastReceiver {
 	@Override
 	public void onReceive(Context arg0, Intent arg1) {
 		//来电时移除锁屏界面
-		Log.d("screenenglish","receiver");
 		if(arg1.getAction().equals("android.intent.action.PHONE_STATE") && StartLockView.startLockView != null){
 			WindowManager wm = (WindowManager)arg0.getSystemService(Context.WINDOW_SERVICE);
 			wm.removeView(StartLockView.startLockView);

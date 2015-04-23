@@ -20,19 +20,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.screenenglish.db.ScreenEnglishDB;
+import com.example.screenenglish.service.StartScreenLockService;
 
-public class StartLockView implements Runnable{
+public class StartLockView{
 	private Context context;
 	private TextView detail;
 	private EditText word;
 	private Button read;
 	private Button check;
 	public static final String DB_NAME = "notes";
+	public final String LOGNAME = "View";
 	/*
 	 * 数据库版本
 	 */
 	public static final int VERSION = 1;
-	private Util util;
 	private View view;
 	public static View startLockView;
 	private WindowManager.LayoutParams wmParams;
@@ -44,7 +45,8 @@ public class StartLockView implements Runnable{
 	private DisplayMetrics dm;
 	@SuppressLint("InflateParams")
 	public StartLockView(final Context context){
-		 Log.d("screenenglish", "view");
+		 
+		if(!StartScreenLockService.ONOFF){Log.d(LOGNAME,"create view");}
 		this.context = context;
 		settings = PreferenceManager.getDefaultSharedPreferences(context);//存储选择项
 		wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -104,9 +106,7 @@ public class StartLockView implements Runnable{
 
 		  return new BitmapDrawable(bm);
 		}
-	@Override
-	public void run() {
-	}
+	
 	public void setEnabled(boolean flag){
 		read.setEnabled(flag);
 		check.setEnabled(flag);

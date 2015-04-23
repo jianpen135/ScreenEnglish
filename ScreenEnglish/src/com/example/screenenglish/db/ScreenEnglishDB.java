@@ -1,18 +1,12 @@
 package com.example.screenenglish.db;
 
-import com.example.screenenglish.Util;
 import com.example.screenenglish.service.StartScreenLockService;
 
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Environment;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class ScreenEnglishDB {
 	public final String LOGNAME = "youdaoDB";
@@ -25,7 +19,6 @@ public class ScreenEnglishDB {
 	private long count;
 	private int randomId;
 	private String dbFilePath;
-	private Util util;
 	private String randomWord;
 	private String randomDetail;
 	
@@ -56,10 +49,10 @@ public class ScreenEnglishDB {
     		db.close();
     	}catch(Exception e){
     		e.printStackTrace();
-    	}
-				
+    	}		
 		if(!StartScreenLockService.ONOFF){Log.d(LOGNAME,"word changed");}
 	}
+	
 	public String getRandomWord(){
 		return randomWord;
 	}

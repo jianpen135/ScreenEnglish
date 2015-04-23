@@ -2,16 +2,12 @@ package com.example.screenenglish.activity;
 
 
 import com.example.screenenglish.R;
-import com.example.screenenglish.db.ScreenEnglishDB;
-import com.example.screenenglish.receiver.ScreenOnOffBroadcastReceiver;
 import com.example.screenenglish.service.StartScreenLockService;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.WindowManager;
-import android.widget.Toast;
 
 
 

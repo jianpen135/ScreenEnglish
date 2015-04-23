@@ -37,8 +37,10 @@ public class StartScreenLockService extends Service{
 	
 	@Override
 	public void onDestroy() {
+		stopForeground(true);  
+		Intent intent = new Intent("com.example.screenenglish.destroy");  
+		sendBroadcast(intent);  
 		super.onDestroy();
-		if(!ONOFF){Log.d(LOGNAME,"service is onDestroy");}
-		startService(new Intent(StartScreenLockService.this, StartScreenLockService.class)); 
+		if(!ONOFF){Log.d(LOGNAME,"service is onDestroy");} 
 	}
 }

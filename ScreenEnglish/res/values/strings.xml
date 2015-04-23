@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">开屏记单词</string>
+    <string name="hello">说明</string>
+    <string name="change">更换</string>
+    <string name="check">确认</string>
+    <string name="action_settings">setings</string>
+    <string name="window_key">单词</string>
+
+</resources>

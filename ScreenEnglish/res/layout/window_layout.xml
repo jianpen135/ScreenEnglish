@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:stretchColumns="0"    
+    android:layout_gravity="bottom" >
+    <TableRow 
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp">
+    	<TextView 
+        	android:id="@+id/show_detail"
+        	android:layout_height="100dp"
+        	android:layout_gravity="center_vertical|center_horizontal"
+        	android:textColor="#fff"
+        />
+    </TableRow>	
+	<TableRow 
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginBottom="30dp">
+ 		<EditText 
+ 	    	android:id="@+id/write_word"
+ 	    	android:layout_height="wrap_content"
+ 	    	android:hint="@string/window_key"
+ 	    	/>
+    </TableRow>
+	
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+         <Button android:id="@+id/change"
+             android:layout_height="wrap_content"
+             android:text="@string/change"
+             style="?android:attr/borderlessButtonStyle"/>
+         <Button android:id="@+id/check"
+             android:layout_height="wrap_content"
+             android:text="@string/check"
+             style="?android:attr/borderlessButtonStyle"/>
+    </TableRow>     
+</TableLayout>
